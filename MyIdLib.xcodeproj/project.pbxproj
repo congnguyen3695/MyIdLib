@@ -17,6 +17,13 @@
 		481568A92B8C50280077530D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481568A72B8C50280077530D /* Main.storyboard */; };
 		481568AB2B8C50290077530D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481568AA2B8C50290077530D /* Assets.xcassets */; };
 		481568AE2B8C50290077530D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481568AC2B8C50290077530D /* LaunchScreen.storyboard */; };
+		481568B52B8C6F070077530D /* MyIdLibConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568B42B8C6F070077530D /* MyIdLibConfig.swift */; };
+		481568B72B8C6FB50077530D /* MyIdLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568B62B8C6FB50077530D /* MyIdLib.swift */; };
+		481568BC2B8C72EE0077530D /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568BB2B8C72EE0077530D /* Facebook.swift */; };
+		481568BE2B8C73300077530D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568BD2B8C73300077530D /* User.swift */; };
+		481568C22B8C77100077530D /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568C12B8C77100077530D /* Bundle.swift */; };
+		481568C52B8C79B10077530D /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568C42B8C79B10077530D /* XibView.swift */; };
+		481568C72B8C7A120077530D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568C62B8C7A120077530D /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +50,13 @@
 		481568AA2B8C50290077530D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		481568AD2B8C50290077530D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		481568AF2B8C50290077530D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		481568B42B8C6F070077530D /* MyIdLibConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIdLibConfig.swift; sourceTree = "<group>"; };
+		481568B62B8C6FB50077530D /* MyIdLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIdLib.swift; sourceTree = "<group>"; };
+		481568BB2B8C72EE0077530D /* Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
+		481568BD2B8C73300077530D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		481568C12B8C77100077530D /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		481568C42B8C79B10077530D /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		481568C62B8C7A120077530D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +108,12 @@
 		481568832B8C4F5E0077530D /* MyIdLib */ = {
 			isa = PBXGroup;
 			children = (
-				481568842B8C4F5E0077530D /* MyIdLib.h */,
-				481568852B8C4F5E0077530D /* MyIdLib.docc */,
+				481568BA2B8C72DA0077530D /* Model */,
+				481568B82B8C72550077530D /* Service */,
+				481568B32B8C6D400077530D /* Helper */,
+				481568B92B8C72880077530D /* SupportingFiles */,
+				481568B42B8C6F070077530D /* MyIdLibConfig.swift */,
+				481568B62B8C6FB50077530D /* MyIdLib.swift */,
 			);
 			path = MyIdLib;
 			sourceTree = "<group>";
@@ -120,6 +138,57 @@
 				481568AF2B8C50290077530D /* Info.plist */,
 			);
 			path = MyIdExample;
+			sourceTree = "<group>";
+		};
+		481568B32B8C6D400077530D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				481568C32B8C799F0077530D /* Components */,
+				481568BF2B8C76F70077530D /* Extension */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		481568B82B8C72550077530D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		481568B92B8C72880077530D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				481568852B8C4F5E0077530D /* MyIdLib.docc */,
+				481568842B8C4F5E0077530D /* MyIdLib.h */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		481568BA2B8C72DA0077530D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				481568BB2B8C72EE0077530D /* Facebook.swift */,
+				481568BD2B8C73300077530D /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		481568BF2B8C76F70077530D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				481568C12B8C77100077530D /* Bundle.swift */,
+				481568C62B8C7A120077530D /* UIView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		481568C32B8C799F0077530D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				481568C42B8C79B10077530D /* XibView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +331,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				481568C72B8C7A120077530D /* UIView.swift in Sources */,
+				481568B72B8C6FB50077530D /* MyIdLib.swift in Sources */,
+				481568C52B8C79B10077530D /* XibView.swift in Sources */,
+				481568C22B8C77100077530D /* Bundle.swift in Sources */,
+				481568B52B8C6F070077530D /* MyIdLibConfig.swift in Sources */,
 				481568862B8C4F5E0077530D /* MyIdLib.docc in Sources */,
+				481568BE2B8C73300077530D /* User.swift in Sources */,
+				481568BC2B8C72EE0077530D /* Facebook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +518,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
@@ -451,7 +527,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = vn.84soft.MyIdLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -477,7 +553,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
@@ -486,7 +562,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.7;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = vn.84soft.MyIdLib;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -502,6 +578,7 @@
 		481568992B8C4F5F0077530D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8J9J8V53Z7;
@@ -522,6 +599,7 @@
 		4815689A2B8C4F5F0077530D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8J9J8V53Z7;

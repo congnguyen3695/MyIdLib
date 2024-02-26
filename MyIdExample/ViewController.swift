@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import MyIdLib
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let config = MyIdLibConfig()
+        config.apiKey = ""
+        MyIdLib.shared().initial(appConfig: config)
     }
 
 
