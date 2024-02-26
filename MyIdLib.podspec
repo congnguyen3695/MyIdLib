@@ -73,6 +73,8 @@ spec.license      = { :type => "MIT", :file => "LICENSE" }
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
+spec.swift_version = "5"
+
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
