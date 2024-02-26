@@ -1,0 +1,21 @@
+# Xcode
+DerivedData
+xcuserdata
+
+# Cocoa Pods
+Pods
+
+# Firebase Build
+#GoogleService-Info.plist
+
+/Doc
+
+# Localization
+/AevisDoctors/SupportingFiles/Localization/*.xml
+/AevisDoctors/SupportingFiles/Localization/twine.txt
+
+# Fastlane
+/fastlane/report.xml
+/artifacts
+*.dSYM.zip
+*.ipa
