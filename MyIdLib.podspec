@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MyIdLib"
-  spec.version      = "0.0.3"
+  spec.version      = "0.0.4"
   spec.summary      = "A CocoaPods library written in Swift"
 
   # This description is used to generate tags and improve search results.
@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
   This CocoaPods library helps you perform calculation.
                    DESC
 
-  spec.homepage     = "https://github.com/congnguyen3695/MyIdLib.git"
+  spec.homepage     = "https://github.com/congnguyen3695/MyIdLib"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
