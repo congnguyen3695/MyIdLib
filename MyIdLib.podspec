@@ -40,7 +40,7 @@ Pod::Spec.new do |spec|
   #
 
   #spec.license      = "MIT (example)"
-spec.license      = { :type => "MIT", :file => "LICENSE" }
+   spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -73,8 +73,9 @@ spec.license      = { :type => "MIT", :file => "LICENSE" }
   # spec.watchos.deployment_target = "2.0"
   # spec.tvos.deployment_target = "9.0"
 
-spec.swift_version = "5"
-
+  spec.swift_version = "5"
+  spec.dependency "Alamofire", "~> 5.0"
+  spec.dependency "ObjectMapper", "~> 4.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
