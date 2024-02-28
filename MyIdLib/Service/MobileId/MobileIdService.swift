@@ -9,7 +9,7 @@ import Foundation
 
 public class MobileIdService {
     
-    static func login(username: String, complition: ((_ user: User?)-> Void)? = nil) {
+    public static func login(username: String, complition: ((_ user: User?)-> Void)? = nil) {
         let user = User()
         user.id = 100000
         complition?(user)
