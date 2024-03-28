@@ -12,6 +12,7 @@ public class MyIdLibConfig {
     var appInfo: AppInfo?
     public var language: MyIdLanguageType = MyIdLanguageType.vi
     public var apiKey: String = ""
+    public var mode: MyIdLibMode = MyIdLibMode.dev
     
     public init() {
         
@@ -28,4 +29,16 @@ class AppInfo {
 
 public enum MyIdLanguageType {
     case vi, en
+}
+
+public enum MyIdLibMode {
+    case dev
+    case prod
+    
+    var url: String {
+        switch self {
+        case .dev: return "http://192.168.1.7:8088/"
+        case .prod: return "https://mobileid.vn/"
+        }
+    }
 }

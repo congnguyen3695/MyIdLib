@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthController" customModule="MyIdLib" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicatorView" destination="px6-Eg-lgY" id="eef-M6-SgU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webview" destination="uEY-TT-UCW" id="C4y-DP-kzO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEY-TT-UCW">
+                    <rect key="frame" x="0.0" y="47" width="390" height="797"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="px6-Eg-lgY">
+                    <rect key="frame" x="176.66666666666666" y="403.66666666666669" width="37" height="37"/>
+                    <color key="color" systemColor="systemOrangeColor"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="px6-Eg-lgY" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4tm-de-cFK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uEY-TT-UCW" secondAttribute="trailing" id="7VF-K0-zXi"/>
+                <constraint firstAttribute="bottom" secondItem="uEY-TT-UCW" secondAttribute="bottom" id="Z02-VJ-DQV"/>
+                <constraint firstItem="px6-Eg-lgY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dKI-5K-8hA"/>
+                <constraint firstItem="uEY-TT-UCW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dgm-bf-Dhr"/>
+                <constraint firstItem="uEY-TT-UCW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eYO-VG-uhZ"/>
+            </constraints>
+            <point key="canvasLocation" x="57.251908396946561" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

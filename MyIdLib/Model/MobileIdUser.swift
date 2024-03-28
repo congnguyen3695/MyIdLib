@@ -8,16 +8,16 @@
 import Foundation
 import ObjectMapper
 
-public class User {
+public class MobileIdUser: Mappable {
     var id: Int?
     
     init() {}
     
-    required init?(map: Map) {
+    required public init?(map: Map) {
         
     }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         id <- map["id"]
     }
     

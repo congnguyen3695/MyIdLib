@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import UIKit
 
 public class MyIdLib: NSObject {
 
     var appConfig: MyIdLibConfig = MyIdLibConfig()
+    var application: UIApplication!
     
     private static var myIdLib: MyIdLib!
     
@@ -20,7 +22,8 @@ public class MyIdLib: NSObject {
         return myIdLib
     }
 
-    public func initial(appConfig: MyIdLibConfig? = nil) {
+    public func initial(_ application: UIApplication, appConfig: MyIdLibConfig? = nil) {
+        self.application = application
         if let config = appConfig {
             self.appConfig = config
         }
