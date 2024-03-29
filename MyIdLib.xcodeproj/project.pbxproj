@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		03A21CD0FD91FBF0CE2F05FE /* Pods_MyIdLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632464E47FF5DA66413C56BE /* Pods_MyIdLib.framework */; };
-		407ACE55525DBA8CBACEEDF6 /* Pods_MyIdExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1160A5DB73F49975CAD5B324 /* Pods_MyIdExample.framework */; };
 		481568862B8C4F5E0077530D /* MyIdLib.docc in Sources */ = {isa = PBXBuildFile; fileRef = 481568852B8C4F5E0077530D /* MyIdLib.docc */; };
 		4815688C2B8C4F5F0077530D /* MyIdLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481568812B8C4F5E0077530D /* MyIdLib.framework */; };
 		481568912B8C4F5F0077530D /* MyIdLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568902B8C4F5F0077530D /* MyIdLibTests.swift */; };
@@ -21,17 +20,17 @@
 		481568AE2B8C50290077530D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481568AC2B8C50290077530D /* LaunchScreen.storyboard */; };
 		481568B52B8C6F070077530D /* MyIdLibConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568B42B8C6F070077530D /* MyIdLibConfig.swift */; };
 		481568B72B8C6FB50077530D /* MyIdLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568B62B8C6FB50077530D /* MyIdLib.swift */; };
-		481568BE2B8C73300077530D /* MobileIdUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568BD2B8C73300077530D /* MobileIdUser.swift */; };
 		481568C22B8C77100077530D /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568C12B8C77100077530D /* Bundle.swift */; };
 		481568C52B8C79B10077530D /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568C42B8C79B10077530D /* XibView.swift */; };
 		481568C72B8C7A120077530D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568C62B8C7A120077530D /* UIView.swift */; };
 		481569372B8CB2940077530D /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569362B8CB2940077530D /* APIModel.swift */; };
 		4815696A2B8DD0660077530D /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569692B8DD0660077530D /* BaseResponse.swift */; };
-		481569792B8F2A050077530D /* MobileIdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569782B8F2A050077530D /* MobileIdService.swift */; };
+		481569792B8F2A050077530D /* MobileIdApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569782B8F2A050077530D /* MobileIdApplication.swift */; };
 		48FBB1632BB5616000EC2222 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1612BB5616000EC2222 /* AuthController.swift */; };
 		48FBB1642BB5616000EC2222 /* AuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FBB1622BB5616000EC2222 /* AuthController.xib */; };
-		48FBB1672BB56BF400EC2222 /* MobileIdAvailable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1662BB56BF400EC2222 /* MobileIdAvailable.swift */; };
-		48FBB1692BB5758200EC2222 /* MobileIdAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1682BB5758200EC2222 /* MobileIdAuth.swift */; };
+		48FBB1692BB5758200EC2222 /* MobileId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1682BB5758200EC2222 /* MobileId.swift */; };
+		48FBB16B2BB667F900EC2222 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB16A2BB667F900EC2222 /* Keychain.swift */; };
+		72897A35E15870AFC910F7C4 /* Pods_MyIdLib_MyIdLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AC2CA19C4FE9C7F24059D9 /* Pods_MyIdLib_MyIdLibTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +45,7 @@
 
 /* Begin PBXFileReference section */
 		0FE47CED50C39DFBAA1E3FEB /* Pods-MyIdLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib.release.xcconfig"; path = "Target Support Files/Pods-MyIdLib/Pods-MyIdLib.release.xcconfig"; sourceTree = "<group>"; };
-		1160A5DB73F49975CAD5B324 /* Pods_MyIdExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyIdExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19AC2CA19C4FE9C7F24059D9 /* Pods_MyIdLib_MyIdLibTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyIdLib_MyIdLibTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B825861EE3E67C38CC89852 /* Pods-MyIdLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib.debug.xcconfig"; path = "Target Support Files/Pods-MyIdLib/Pods-MyIdLib.debug.xcconfig"; sourceTree = "<group>"; };
 		481568812B8C4F5E0077530D /* MyIdLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyIdLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		481568842B8C4F5E0077530D /* MyIdLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyIdLib.h; sourceTree = "<group>"; };
@@ -63,20 +62,19 @@
 		481568AF2B8C50290077530D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		481568B42B8C6F070077530D /* MyIdLibConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIdLibConfig.swift; sourceTree = "<group>"; };
 		481568B62B8C6FB50077530D /* MyIdLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIdLib.swift; sourceTree = "<group>"; };
-		481568BD2B8C73300077530D /* MobileIdUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileIdUser.swift; sourceTree = "<group>"; };
 		481568C12B8C77100077530D /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		481568C42B8C79B10077530D /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		481568C62B8C7A120077530D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		481569362B8CB2940077530D /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		481569692B8DD0660077530D /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
-		481569782B8F2A050077530D /* MobileIdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileIdService.swift; sourceTree = "<group>"; };
+		481569782B8F2A050077530D /* MobileIdApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileIdApplication.swift; sourceTree = "<group>"; };
 		48FBB1612BB5616000EC2222 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		48FBB1622BB5616000EC2222 /* AuthController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthController.xib; sourceTree = "<group>"; };
-		48FBB1662BB56BF400EC2222 /* MobileIdAvailable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileIdAvailable.swift; sourceTree = "<group>"; };
-		48FBB1682BB5758200EC2222 /* MobileIdAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileIdAuth.swift; sourceTree = "<group>"; };
-		50D5A47311167A682CFD6FD2 /* Pods-MyIdExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdExample.debug.xcconfig"; path = "Target Support Files/Pods-MyIdExample/Pods-MyIdExample.debug.xcconfig"; sourceTree = "<group>"; };
+		48FBB1682BB5758200EC2222 /* MobileId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileId.swift; sourceTree = "<group>"; };
+		48FBB16A2BB667F900EC2222 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		632464E47FF5DA66413C56BE /* Pods_MyIdLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyIdLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		86606D7CE8EDD4BAB0851BFE /* Pods-MyIdExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdExample.release.xcconfig"; path = "Target Support Files/Pods-MyIdExample/Pods-MyIdExample.release.xcconfig"; sourceTree = "<group>"; };
+		BF1466FED393ADCA8AC33A89 /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib-MyIdLibTests.debug.xcconfig"; path = "Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F148586AE632A5DBC4234485 /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib-MyIdLibTests.release.xcconfig"; path = "Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4815688C2B8C4F5F0077530D /* MyIdLib.framework in Frameworks */,
+				72897A35E15870AFC910F7C4 /* Pods_MyIdLib_MyIdLibTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				407ACE55525DBA8CBACEEDF6 /* Pods_MyIdExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +130,7 @@
 		481568832B8C4F5E0077530D /* MyIdLib */ = {
 			isa = PBXGroup;
 			children = (
+				48FBB16E2BB69D3300EC2222 /* App */,
 				48FBB1602BB5613000EC2222 /* Controller */,
 				481568BA2B8C72DA0077530D /* Model */,
 				481568B82B8C72550077530D /* Service */,
@@ -177,7 +176,6 @@
 		481568B82B8C72550077530D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				481569772B8F29E70077530D /* MobileId */,
 				481569362B8CB2940077530D /* APIModel.swift */,
 			);
 			path = Service;
@@ -195,10 +193,8 @@
 		481568BA2B8C72DA0077530D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				481568BD2B8C73300077530D /* MobileIdUser.swift */,
 				481569692B8DD0660077530D /* BaseResponse.swift */,
-				48FBB1662BB56BF400EC2222 /* MobileIdAvailable.swift */,
-				48FBB1682BB5758200EC2222 /* MobileIdAuth.swift */,
+				48FBB1682BB5758200EC2222 /* MobileId.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,6 +204,7 @@
 			children = (
 				481568C12B8C77100077530D /* Bundle.swift */,
 				481568C62B8C7A120077530D /* UIView.swift */,
+				48FBB16A2BB667F900EC2222 /* Keychain.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -223,7 +220,7 @@
 		481569772B8F29E70077530D /* MobileId */ = {
 			isa = PBXGroup;
 			children = (
-				481569782B8F2A050077530D /* MobileIdService.swift */,
+				481569782B8F2A050077530D /* MobileIdApplication.swift */,
 			);
 			path = MobileId;
 			sourceTree = "<group>";
@@ -245,11 +242,19 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		48FBB16E2BB69D3300EC2222 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				481569772B8F29E70077530D /* MobileId */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		6D7ED64BE29F24441ADD531A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				632464E47FF5DA66413C56BE /* Pods_MyIdLib.framework */,
-				1160A5DB73F49975CAD5B324 /* Pods_MyIdExample.framework */,
+				19AC2CA19C4FE9C7F24059D9 /* Pods_MyIdLib_MyIdLibTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -259,8 +264,8 @@
 			children = (
 				2B825861EE3E67C38CC89852 /* Pods-MyIdLib.debug.xcconfig */,
 				0FE47CED50C39DFBAA1E3FEB /* Pods-MyIdLib.release.xcconfig */,
-				50D5A47311167A682CFD6FD2 /* Pods-MyIdExample.debug.xcconfig */,
-				86606D7CE8EDD4BAB0851BFE /* Pods-MyIdExample.release.xcconfig */,
+				BF1466FED393ADCA8AC33A89 /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */,
+				F148586AE632A5DBC4234485 /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -302,9 +307,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 481568982B8C4F5F0077530D /* Build configuration list for PBXNativeTarget "MyIdLibTests" */;
 			buildPhases = (
+				15E48278CABD450FEA2A1EFC /* [CP] Check Pods Manifest.lock */,
 				481568872B8C4F5F0077530D /* Sources */,
 				481568882B8C4F5F0077530D /* Frameworks */,
 				481568892B8C4F5F0077530D /* Resources */,
+				67337A79564A1A1F0CFD5FEC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,11 +327,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 481568B22B8C50290077530D /* Build configuration list for PBXNativeTarget "MyIdExample" */;
 			buildPhases = (
-				0E8BFBB7DF88DE933937893B /* [CP] Check Pods Manifest.lock */,
 				4815689B2B8C50280077530D /* Sources */,
 				4815689C2B8C50280077530D /* Frameworks */,
 				4815689D2B8C50280077530D /* Resources */,
-				4DB876376E918AC9F0821941 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -405,7 +410,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0E8BFBB7DF88DE933937893B /* [CP] Check Pods Manifest.lock */ = {
+		15E48278CABD450FEA2A1EFC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,28 +425,28 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyIdExample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-MyIdLib-MyIdLibTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4DB876376E918AC9F0821941 /* [CP] Embed Pods Frameworks */ = {
+		67337A79564A1A1F0CFD5FEC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyIdExample/Pods-MyIdExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyIdExample/Pods-MyIdExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyIdExample/Pods-MyIdExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF523F9FAF793B70DB7E988D /* [CP] Check Pods Manifest.lock */ = {
@@ -476,16 +481,15 @@
 				4815696A2B8DD0660077530D /* BaseResponse.swift in Sources */,
 				48FBB1632BB5616000EC2222 /* AuthController.swift in Sources */,
 				481568C72B8C7A120077530D /* UIView.swift in Sources */,
-				48FBB1672BB56BF400EC2222 /* MobileIdAvailable.swift in Sources */,
 				481568B72B8C6FB50077530D /* MyIdLib.swift in Sources */,
 				481568C52B8C79B10077530D /* XibView.swift in Sources */,
 				481568C22B8C77100077530D /* Bundle.swift in Sources */,
 				481568B52B8C6F070077530D /* MyIdLibConfig.swift in Sources */,
 				481568862B8C4F5E0077530D /* MyIdLib.docc in Sources */,
-				481568BE2B8C73300077530D /* MobileIdUser.swift in Sources */,
-				481569792B8F2A050077530D /* MobileIdService.swift in Sources */,
-				48FBB1692BB5758200EC2222 /* MobileIdAuth.swift in Sources */,
+				481569792B8F2A050077530D /* MobileIdApplication.swift in Sources */,
+				48FBB1692BB5758200EC2222 /* MobileId.swift in Sources */,
 				481569372B8CB2940077530D /* APIModel.swift in Sources */,
+				48FBB16B2BB667F900EC2222 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,6 +734,7 @@
 		};
 		481568992B8C4F5F0077530D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF1466FED393ADCA8AC33A89 /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -751,6 +756,7 @@
 		};
 		4815689A2B8C4F5F0077530D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F148586AE632A5DBC4234485 /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -772,7 +778,6 @@
 		};
 		481568B02B8C50290077530D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50D5A47311167A682CFD6FD2 /* Pods-MyIdExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -803,7 +808,6 @@
 		};
 		481568B12B8C50290077530D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86606D7CE8EDD4BAB0851BFE /* Pods-MyIdExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

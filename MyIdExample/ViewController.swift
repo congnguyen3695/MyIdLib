@@ -14,14 +14,24 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        MobileIdApplication.shared.delegate = self
     }
 
     @IBAction func onClick(_ sender: UIButton) {
-        MobileIdService.login(phone: "99912345678908", scope: "openid ip:phone_verify ip:mobile_id", state: "9805b26d-4445-45d1-b458-8b8a598jhy79", complition: {response in
-            print(response)
-        })
+        MobileIdApplication.shared.login(phone: "99912345678908",
+                                         scope: "openid ip:phone_verify ip:mobile_id")
     }
 
 }
 
+extension ViewController: MobileIdApplicationDelegate {
+    func verifyMobileIdDidFinish(_ data: MobileIdAuth?) {
+        if let data = data {
+            print(data.toJSON())
+        } else {
+            print("Mobile id invalid")
+        }
+    }
+    
+    
+}

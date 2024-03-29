@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.8.1)
+  - KeychainAccess (4.2.2)
   - ObjectMapper (4.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
+  - KeychainAccess
   - ObjectMapper (~> 4.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - KeychainAccess
     - ObjectMapper
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
 
-PODFILE CHECKSUM: d512a77185cd42f1086c62d64344eb05f62266ee
+PODFILE CHECKSUM: 2bc0b35ef0b39ba534eb53ff9c1fb87eda1f1594
 
 COCOAPODS: 1.15.2
