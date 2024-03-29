@@ -6,6 +6,7 @@ target 'MyIdLib' do
 	
   pod 'Alamofire', '~>5.0'
   pod 'ObjectMapper', '~>4.0'
+  pod 'KeychainAccess'
 
   target 'MyIdLibTests' do
     # Pods for testing

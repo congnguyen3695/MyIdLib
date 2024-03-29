@@ -20,15 +20,17 @@
 		481568AE2B8C50290077530D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481568AC2B8C50290077530D /* LaunchScreen.storyboard */; };
 		481568B52B8C6F070077530D /* MyIdLibConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568B42B8C6F070077530D /* MyIdLibConfig.swift */; };
 		481568B72B8C6FB50077530D /* MyIdLib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568B62B8C6FB50077530D /* MyIdLib.swift */; };
-		481568BC2B8C72EE0077530D /* Facebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568BB2B8C72EE0077530D /* Facebook.swift */; };
-		481568BE2B8C73300077530D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568BD2B8C73300077530D /* User.swift */; };
 		481568C22B8C77100077530D /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568C12B8C77100077530D /* Bundle.swift */; };
 		481568C52B8C79B10077530D /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568C42B8C79B10077530D /* XibView.swift */; };
 		481568C72B8C7A120077530D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568C62B8C7A120077530D /* UIView.swift */; };
 		481569372B8CB2940077530D /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569362B8CB2940077530D /* APIModel.swift */; };
 		4815696A2B8DD0660077530D /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569692B8DD0660077530D /* BaseResponse.swift */; };
-		481569792B8F2A050077530D /* MobileIdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569782B8F2A050077530D /* MobileIdService.swift */; };
-		9BB28ED8D975273610FE2EF1 /* Pods_MyIdLib_MyIdLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0572E94470ED8EFE70316AA2 /* Pods_MyIdLib_MyIdLibTests.framework */; };
+		481569792B8F2A050077530D /* MobileIdApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569782B8F2A050077530D /* MobileIdApplication.swift */; };
+		48FBB1632BB5616000EC2222 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1612BB5616000EC2222 /* AuthController.swift */; };
+		48FBB1642BB5616000EC2222 /* AuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FBB1622BB5616000EC2222 /* AuthController.xib */; };
+		48FBB1692BB5758200EC2222 /* MobileId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1682BB5758200EC2222 /* MobileId.swift */; };
+		48FBB16B2BB667F900EC2222 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB16A2BB667F900EC2222 /* Keychain.swift */; };
+		72897A35E15870AFC910F7C4 /* Pods_MyIdLib_MyIdLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AC2CA19C4FE9C7F24059D9 /* Pods_MyIdLib_MyIdLibTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0572E94470ED8EFE70316AA2 /* Pods_MyIdLib_MyIdLibTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyIdLib_MyIdLibTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FE47CED50C39DFBAA1E3FEB /* Pods-MyIdLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib.release.xcconfig"; path = "Target Support Files/Pods-MyIdLib/Pods-MyIdLib.release.xcconfig"; sourceTree = "<group>"; };
+		19AC2CA19C4FE9C7F24059D9 /* Pods_MyIdLib_MyIdLibTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyIdLib_MyIdLibTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B825861EE3E67C38CC89852 /* Pods-MyIdLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib.debug.xcconfig"; path = "Target Support Files/Pods-MyIdLib/Pods-MyIdLib.debug.xcconfig"; sourceTree = "<group>"; };
 		481568812B8C4F5E0077530D /* MyIdLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyIdLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		481568842B8C4F5E0077530D /* MyIdLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyIdLib.h; sourceTree = "<group>"; };
@@ -60,17 +62,19 @@
 		481568AF2B8C50290077530D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		481568B42B8C6F070077530D /* MyIdLibConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIdLibConfig.swift; sourceTree = "<group>"; };
 		481568B62B8C6FB50077530D /* MyIdLib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIdLib.swift; sourceTree = "<group>"; };
-		481568BB2B8C72EE0077530D /* Facebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Facebook.swift; sourceTree = "<group>"; };
-		481568BD2B8C73300077530D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		481568C12B8C77100077530D /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		481568C42B8C79B10077530D /* XibView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		481568C62B8C7A120077530D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		481569362B8CB2940077530D /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		481569692B8DD0660077530D /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
-		481569782B8F2A050077530D /* MobileIdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileIdService.swift; sourceTree = "<group>"; };
-		4C20D3D8C061B865BCC509DB /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib-MyIdLibTests.release.xcconfig"; path = "Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests.release.xcconfig"; sourceTree = "<group>"; };
+		481569782B8F2A050077530D /* MobileIdApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileIdApplication.swift; sourceTree = "<group>"; };
+		48FBB1612BB5616000EC2222 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		48FBB1622BB5616000EC2222 /* AuthController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthController.xib; sourceTree = "<group>"; };
+		48FBB1682BB5758200EC2222 /* MobileId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileId.swift; sourceTree = "<group>"; };
+		48FBB16A2BB667F900EC2222 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		632464E47FF5DA66413C56BE /* Pods_MyIdLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyIdLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F726747AA6C4D1E43B9166ED /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib-MyIdLibTests.debug.xcconfig"; path = "Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF1466FED393ADCA8AC33A89 /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib-MyIdLibTests.debug.xcconfig"; path = "Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F148586AE632A5DBC4234485 /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib-MyIdLibTests.release.xcconfig"; path = "Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4815688C2B8C4F5F0077530D /* MyIdLib.framework in Frameworks */,
-				9BB28ED8D975273610FE2EF1 /* Pods_MyIdLib_MyIdLibTests.framework in Frameworks */,
+				72897A35E15870AFC910F7C4 /* Pods_MyIdLib_MyIdLibTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +130,8 @@
 		481568832B8C4F5E0077530D /* MyIdLib */ = {
 			isa = PBXGroup;
 			children = (
+				48FBB16E2BB69D3300EC2222 /* App */,
+				48FBB1602BB5613000EC2222 /* Controller */,
 				481568BA2B8C72DA0077530D /* Model */,
 				481568B82B8C72550077530D /* Service */,
 				481568B32B8C6D400077530D /* Helper */,
@@ -170,7 +176,6 @@
 		481568B82B8C72550077530D /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				481569772B8F29E70077530D /* MobileId */,
 				481569362B8CB2940077530D /* APIModel.swift */,
 			);
 			path = Service;
@@ -188,9 +193,8 @@
 		481568BA2B8C72DA0077530D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				481568BB2B8C72EE0077530D /* Facebook.swift */,
-				481568BD2B8C73300077530D /* User.swift */,
 				481569692B8DD0660077530D /* BaseResponse.swift */,
+				48FBB1682BB5758200EC2222 /* MobileId.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +204,7 @@
 			children = (
 				481568C12B8C77100077530D /* Bundle.swift */,
 				481568C62B8C7A120077530D /* UIView.swift */,
+				48FBB16A2BB667F900EC2222 /* Keychain.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -215,16 +220,41 @@
 		481569772B8F29E70077530D /* MobileId */ = {
 			isa = PBXGroup;
 			children = (
-				481569782B8F2A050077530D /* MobileIdService.swift */,
+				481569782B8F2A050077530D /* MobileIdApplication.swift */,
 			);
 			path = MobileId;
+			sourceTree = "<group>";
+		};
+		48FBB1602BB5613000EC2222 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				48FBB1652BB5667B00EC2222 /* Auth */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		48FBB1652BB5667B00EC2222 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				48FBB1612BB5616000EC2222 /* AuthController.swift */,
+				48FBB1622BB5616000EC2222 /* AuthController.xib */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		48FBB16E2BB69D3300EC2222 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				481569772B8F29E70077530D /* MobileId */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		6D7ED64BE29F24441ADD531A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				632464E47FF5DA66413C56BE /* Pods_MyIdLib.framework */,
-				0572E94470ED8EFE70316AA2 /* Pods_MyIdLib_MyIdLibTests.framework */,
+				19AC2CA19C4FE9C7F24059D9 /* Pods_MyIdLib_MyIdLibTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -234,8 +264,8 @@
 			children = (
 				2B825861EE3E67C38CC89852 /* Pods-MyIdLib.debug.xcconfig */,
 				0FE47CED50C39DFBAA1E3FEB /* Pods-MyIdLib.release.xcconfig */,
-				F726747AA6C4D1E43B9166ED /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */,
-				4C20D3D8C061B865BCC509DB /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */,
+				BF1466FED393ADCA8AC33A89 /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */,
+				F148586AE632A5DBC4234485 /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -277,11 +307,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 481568982B8C4F5F0077530D /* Build configuration list for PBXNativeTarget "MyIdLibTests" */;
 			buildPhases = (
-				33CB3874F3FF8C4EC4F57D1E /* [CP] Check Pods Manifest.lock */,
+				15E48278CABD450FEA2A1EFC /* [CP] Check Pods Manifest.lock */,
 				481568872B8C4F5F0077530D /* Sources */,
 				481568882B8C4F5F0077530D /* Frameworks */,
 				481568892B8C4F5F0077530D /* Resources */,
-				ABB428F0E742189E54D7B138 /* [CP] Embed Pods Frameworks */,
+				67337A79564A1A1F0CFD5FEC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -356,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48FBB1642BB5616000EC2222 /* AuthController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +410,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		33CB3874F3FF8C4EC4F57D1E /* [CP] Check Pods Manifest.lock */ = {
+		15E48278CABD450FEA2A1EFC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -401,7 +432,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ABB428F0E742189E54D7B138 /* [CP] Embed Pods Frameworks */ = {
+		67337A79564A1A1F0CFD5FEC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -448,16 +479,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4815696A2B8DD0660077530D /* BaseResponse.swift in Sources */,
+				48FBB1632BB5616000EC2222 /* AuthController.swift in Sources */,
 				481568C72B8C7A120077530D /* UIView.swift in Sources */,
 				481568B72B8C6FB50077530D /* MyIdLib.swift in Sources */,
 				481568C52B8C79B10077530D /* XibView.swift in Sources */,
 				481568C22B8C77100077530D /* Bundle.swift in Sources */,
 				481568B52B8C6F070077530D /* MyIdLibConfig.swift in Sources */,
 				481568862B8C4F5E0077530D /* MyIdLib.docc in Sources */,
-				481568BE2B8C73300077530D /* User.swift in Sources */,
-				481569792B8F2A050077530D /* MobileIdService.swift in Sources */,
+				481569792B8F2A050077530D /* MobileIdApplication.swift in Sources */,
+				48FBB1692BB5758200EC2222 /* MobileId.swift in Sources */,
 				481569372B8CB2940077530D /* APIModel.swift in Sources */,
-				481568BC2B8C72EE0077530D /* Facebook.swift in Sources */,
+				48FBB16B2BB667F900EC2222 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,7 +734,7 @@
 		};
 		481568992B8C4F5F0077530D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F726747AA6C4D1E43B9166ED /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */;
+			baseConfigurationReference = BF1466FED393ADCA8AC33A89 /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -724,7 +756,7 @@
 		};
 		4815689A2B8C4F5F0077530D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C20D3D8C061B865BCC509DB /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */;
+			baseConfigurationReference = F148586AE632A5DBC4234485 /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

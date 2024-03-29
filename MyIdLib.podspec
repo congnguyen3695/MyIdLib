@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "MyIdLib"
   spec.version      = "0.0.4"
-  spec.summary      = "A CocoaPods library written in Swift"
+  spec.summary      = "Login without password"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-  This CocoaPods library helps you perform calculation.
+  Login without password
                    DESC
 
   spec.homepage     = "https://github.com/congnguyen3695/MyIdLib"
@@ -53,9 +53,8 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "congnguyen" => "nguyenmanhcong1995@gmail.com" }
+  spec.authors             = { "congnguyen" => "nguyenmanhcong1995@gmail.com" }
   # Or just: spec.author    = "congnguyen"
-  # spec.authors            = { "congnguyen" => "nguyenmanhcong1995@gmail.com" }
   # spec.social_media_url   = "https://twitter.com/congnguyen"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -76,6 +75,7 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5"
   spec.dependency "Alamofire", "~> 5.0"
   spec.dependency "ObjectMapper", "~> 4.0"
+  spec.dependency "KeychainAccess"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
