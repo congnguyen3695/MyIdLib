@@ -11,6 +11,8 @@ import MyIdLib
 class ViewController: UIViewController {
     
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var statusLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,18 +20,22 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onClick(_ sender: UIButton) {
-        MobileIdApplication.shared.login(phone: "99912345678908",
+        if textField.text?.isEmpty == true {
+            statusLabel.text = "Phone is required"
+            return
+        }
+        MobileIdApplication.shared.login(phone: textField.text ?? "",
                                          scope: "openid ip:phone_verify ip:mobile_id")
     }
 
 }
 
 extension ViewController: MobileIdApplicationDelegate {
-    func verifyMobileIdDidFinish(_ data: MobileIdAuth?) {
+    func verifyMobileIdDidFinish(_ data: MobileIdAuth?, _ error: NSError?) {
         if let data = data {
-            print(data.toJSON())
+            statusLabel.text = data.toJSONString()
         } else {
-            print("Mobile id invalid")
+            statusLabel.text = error?.localizedDescription ?? "Mobile id invalid"
         }
     }
     

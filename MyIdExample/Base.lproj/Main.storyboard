@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,25 +18,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ATz-6E-mB3">
-                                <rect key="frame" x="148.66666666666666" y="408.66666666666669" width="95.666666666666657" height="35"/>
+                                <rect key="frame" x="143" y="409" width="107.33333333333331" height="34.333333333333314"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Mobile ID"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Đăng nhập"/>
                                 <connections>
                                     <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9mo-Rl-Wx3"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Số điện thoạt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRk-e4-RDI">
+                                <rect key="frame" x="24" y="345" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="c2U-tt-mSf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayy-41-oZy">
+                                <rect key="frame" x="24" y="467.33333333333331" width="345" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ayy-41-oZy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="5do-Ja-uKj"/>
+                            <constraint firstItem="ayy-41-oZy" firstAttribute="top" secondItem="ATz-6E-mB3" secondAttribute="bottom" constant="24" id="7Bb-na-Mor"/>
                             <constraint firstItem="ATz-6E-mB3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="92k-yt-clK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ayy-41-oZy" secondAttribute="bottom" constant="24" id="AHj-dv-883"/>
+                            <constraint firstItem="vRk-e4-RDI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="JeK-ae-Dwn"/>
+                            <constraint firstItem="ATz-6E-mB3" firstAttribute="top" secondItem="vRk-e4-RDI" secondAttribute="bottom" constant="24" id="S1a-Xd-2fr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vRk-e4-RDI" secondAttribute="trailing" constant="24" id="ht8-Sa-qw9"/>
                             <constraint firstItem="ATz-6E-mB3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mFz-4j-Rdz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ayy-41-oZy" secondAttribute="trailing" constant="24" id="qjj-cV-yUb"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="button" destination="ATz-6E-mB3" id="ffG-BL-XJl"/>
+                        <outlet property="statusLabel" destination="ayy-41-oZy" id="E4X-WZ-Kl2"/>
+                        <outlet property="textField" destination="vRk-e4-RDI" id="z8G-2M-ejf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -44,6 +68,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

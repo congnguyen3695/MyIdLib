@@ -14,16 +14,16 @@ public class MobileIdApplication {
     
     public static let shared = MobileIdApplication()
     
-    public func checkAvailable(phone: String, complition: ((_ response: MobileIdAvailable?)-> Void)? = nil) {
+    public func checkAvailable(phone: String, complition: ((_ response: MobileIdAvailable?, _ error: NSError?)-> Void)? = nil) {
         let params: [String: String] = ["phone": phone]
 
         APIModel.request(link: MyIdLib.shared().appConfig.mode.url + "api/v1/mobile-id/available",
                          method: .get,
                          query: params,
                          success: {(data: BaseResponse<MobileIdAvailable>?) in
-            complition?(data?.data)
+            complition?(data?.data, nil)
         }, failure: {error in
-            complition?(nil)
+            complition?(nil, error)
         })
     }
     
@@ -37,7 +37,10 @@ public class MobileIdApplication {
             if let sessionState = sessionState, let code = code {
                 self?.verify(code: code, sessionState: sessionState, state: state)
             } else {
-                self?.delegate?.verifyMobileIdDidFinish(nil)
+                let error = NSError.init(domain: "myid.vn",
+                                         code: 400,
+                                         userInfo: [NSLocalizedDescriptionKey: "Phone is not support"])
+                self?.delegate?.verifyMobileIdDidFinish(nil, error)
             }
         }
     }
@@ -55,9 +58,9 @@ public class MobileIdApplication {
                 Keychain.main[.refreshTokenMobileId] = refreshToken
                 self?.mobileIdAuth = data?.data
             }
-            self?.delegate?.verifyMobileIdDidFinish(data?.data)
+            self?.delegate?.verifyMobileIdDidFinish(data?.data, nil)
         }, failure: {[weak self] error in
-            self?.delegate?.verifyMobileIdDidFinish(nil)
+            self?.delegate?.verifyMobileIdDidFinish(nil, error)
         })
     }
     
@@ -88,9 +91,9 @@ public class MobileIdApplication {
                 Keychain.main[.refreshTokenMobileId] = refreshToken
                 self?.mobileIdAuth = data?.data
             }
-            self?.delegate?.verifyMobileIdDidFinish(data?.data)
+            self?.delegate?.verifyMobileIdDidFinish(data?.data, nil)
         }, failure: {[weak self] error in
-            self?.delegate?.verifyMobileIdDidFinish(nil)
+            self?.delegate?.verifyMobileIdDidFinish(nil, error)
         })
     }
     
@@ -102,6 +105,6 @@ public class MobileIdApplication {
 }
 
 public protocol MobileIdApplicationDelegate {
-    func verifyMobileIdDidFinish(_ data: MobileIdAuth?)
+    func verifyMobileIdDidFinish(_ data: MobileIdAuth?, _ error: NSError?)
     
 }

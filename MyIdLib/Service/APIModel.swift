@@ -25,7 +25,8 @@ class APIModel {
                                     header: HTTPHeaders? = nil,
                                    success: @escaping (_ data: T) -> Void,
                                    failure: @escaping (_ error: NSError) -> Void) {
-        var headers: HTTPHeaders = ["Content-Type": "application/json"]
+        var headers: HTTPHeaders = ["Content-Type": "application/json",
+                                    "API_KEY": MyIdLib.shared().appConfig.apiKey]
         if let h = header {
             for (key, value) in h.dictionary {
                 headers[key] = value
@@ -36,7 +37,6 @@ class APIModel {
                                  parameters: body,
                                  encoding: method == .get ? URLEncoding.default : JSONEncoding.default,
                                  headers: headers)
-                        .validate(statusCode: [200, 201, 202])
                         .responseString { response in
             switch response.result {
             case .success(let result):

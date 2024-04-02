@@ -31,6 +31,7 @@
 		48FBB1692BB5758200EC2222 /* MobileId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1682BB5758200EC2222 /* MobileId.swift */; };
 		48FBB16B2BB667F900EC2222 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB16A2BB667F900EC2222 /* Keychain.swift */; };
 		72897A35E15870AFC910F7C4 /* Pods_MyIdLib_MyIdLibTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AC2CA19C4FE9C7F24059D9 /* Pods_MyIdLib_MyIdLibTests.framework */; };
+		B308DDB40B4AB663F8AEE081 /* Pods_MyIdExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09358F39B9893AEDF2546B3 /* Pods_MyIdExample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +74,10 @@
 		48FBB1682BB5758200EC2222 /* MobileId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileId.swift; sourceTree = "<group>"; };
 		48FBB16A2BB667F900EC2222 /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		632464E47FF5DA66413C56BE /* Pods_MyIdLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyIdLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68EA1E1935F1DAFAD66CF21C /* Pods-MyIdExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdExample.release.xcconfig"; path = "Target Support Files/Pods-MyIdExample/Pods-MyIdExample.release.xcconfig"; sourceTree = "<group>"; };
+		BD042895AD4ADA6E35BC16EE /* Pods-MyIdExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdExample.debug.xcconfig"; path = "Target Support Files/Pods-MyIdExample/Pods-MyIdExample.debug.xcconfig"; sourceTree = "<group>"; };
 		BF1466FED393ADCA8AC33A89 /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib-MyIdLibTests.debug.xcconfig"; path = "Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C09358F39B9893AEDF2546B3 /* Pods_MyIdExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyIdExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F148586AE632A5DBC4234485 /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyIdLib-MyIdLibTests.release.xcconfig"; path = "Target Support Files/Pods-MyIdLib-MyIdLibTests/Pods-MyIdLib-MyIdLibTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B308DDB40B4AB663F8AEE081 /* Pods_MyIdExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +158,7 @@
 		481568A02B8C50280077530D /* MyIdExample */ = {
 			isa = PBXGroup;
 			children = (
+				489C97892BBBF39600CC8D29 /* Screen */,
 				481568A12B8C50280077530D /* AppDelegate.swift */,
 				481568A32B8C50280077530D /* SceneDelegate.swift */,
 				481568A52B8C50280077530D /* ViewController.swift */,
@@ -225,6 +231,13 @@
 			path = MobileId;
 			sourceTree = "<group>";
 		};
+		489C97892BBBF39600CC8D29 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		48FBB1602BB5613000EC2222 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +268,7 @@
 			children = (
 				632464E47FF5DA66413C56BE /* Pods_MyIdLib.framework */,
 				19AC2CA19C4FE9C7F24059D9 /* Pods_MyIdLib_MyIdLibTests.framework */,
+				C09358F39B9893AEDF2546B3 /* Pods_MyIdExample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -266,6 +280,8 @@
 				0FE47CED50C39DFBAA1E3FEB /* Pods-MyIdLib.release.xcconfig */,
 				BF1466FED393ADCA8AC33A89 /* Pods-MyIdLib-MyIdLibTests.debug.xcconfig */,
 				F148586AE632A5DBC4234485 /* Pods-MyIdLib-MyIdLibTests.release.xcconfig */,
+				BD042895AD4ADA6E35BC16EE /* Pods-MyIdExample.debug.xcconfig */,
+				68EA1E1935F1DAFAD66CF21C /* Pods-MyIdExample.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -327,9 +343,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 481568B22B8C50290077530D /* Build configuration list for PBXNativeTarget "MyIdExample" */;
 			buildPhases = (
+				0C7ECFB84B9726690F242066 /* [CP] Check Pods Manifest.lock */,
 				4815689B2B8C50280077530D /* Sources */,
 				4815689C2B8C50280077530D /* Frameworks */,
 				4815689D2B8C50280077530D /* Resources */,
+				65E003FFCDC799C535B99084 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -410,6 +428,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0C7ECFB84B9726690F242066 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyIdExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		15E48278CABD450FEA2A1EFC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,6 +470,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65E003FFCDC799C535B99084 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyIdExample/Pods-MyIdExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyIdExample/Pods-MyIdExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyIdExample/Pods-MyIdExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		67337A79564A1A1F0CFD5FEC /* [CP] Embed Pods Frameworks */ = {
@@ -778,6 +835,7 @@
 		};
 		481568B02B8C50290077530D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD042895AD4ADA6E35BC16EE /* Pods-MyIdExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -808,6 +866,7 @@
 		};
 		481568B12B8C50290077530D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68EA1E1935F1DAFAD66CF21C /* Pods-MyIdExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
