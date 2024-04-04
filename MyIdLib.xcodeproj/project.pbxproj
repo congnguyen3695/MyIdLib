@@ -26,6 +26,10 @@
 		481569372B8CB2940077530D /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569362B8CB2940077530D /* APIModel.swift */; };
 		4815696A2B8DD0660077530D /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569692B8DD0660077530D /* BaseResponse.swift */; };
 		481569792B8F2A050077530D /* MobileIdApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481569782B8F2A050077530D /* MobileIdApplication.swift */; };
+		48EE3EBB2BBEA3AE00771153 /* OtpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE3EB92BBEA3AE00771153 /* OtpViewController.swift */; };
+		48EE3EBC2BBEA3AE00771153 /* OtpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EE3EBA2BBEA3AE00771153 /* OtpViewController.xib */; };
+		48EE3EC12BBEA3D600771153 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE3EBF2BBEA3D600771153 /* SuccessViewController.swift */; };
+		48EE3EC22BBEA3D600771153 /* SuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EE3EC02BBEA3D600771153 /* SuccessViewController.xib */; };
 		48FBB1632BB5616000EC2222 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1612BB5616000EC2222 /* AuthController.swift */; };
 		48FBB1642BB5616000EC2222 /* AuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FBB1622BB5616000EC2222 /* AuthController.xib */; };
 		48FBB1692BB5758200EC2222 /* MobileId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1682BB5758200EC2222 /* MobileId.swift */; };
@@ -69,6 +73,10 @@
 		481569362B8CB2940077530D /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 		481569692B8DD0660077530D /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		481569782B8F2A050077530D /* MobileIdApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileIdApplication.swift; sourceTree = "<group>"; };
+		48EE3EB92BBEA3AE00771153 /* OtpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewController.swift; sourceTree = "<group>"; };
+		48EE3EBA2BBEA3AE00771153 /* OtpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewController.xib; sourceTree = "<group>"; };
+		48EE3EBF2BBEA3D600771153 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		48EE3EC02BBEA3D600771153 /* SuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessViewController.xib; sourceTree = "<group>"; };
 		48FBB1612BB5616000EC2222 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		48FBB1622BB5616000EC2222 /* AuthController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthController.xib; sourceTree = "<group>"; };
 		48FBB1682BB5758200EC2222 /* MobileId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileId.swift; sourceTree = "<group>"; };
@@ -234,8 +242,28 @@
 		489C97892BBBF39600CC8D29 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				48EE3EBE2BBEA3C400771153 /* Success */,
+				48EE3EBD2BBEA3BC00771153 /* Otp */,
 			);
 			path = Screen;
+			sourceTree = "<group>";
+		};
+		48EE3EBD2BBEA3BC00771153 /* Otp */ = {
+			isa = PBXGroup;
+			children = (
+				48EE3EB92BBEA3AE00771153 /* OtpViewController.swift */,
+				48EE3EBA2BBEA3AE00771153 /* OtpViewController.xib */,
+			);
+			path = Otp;
+			sourceTree = "<group>";
+		};
+		48EE3EBE2BBEA3C400771153 /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				48EE3EBF2BBEA3D600771153 /* SuccessViewController.swift */,
+				48EE3EC02BBEA3D600771153 /* SuccessViewController.xib */,
+			);
+			path = Success;
 			sourceTree = "<group>";
 		};
 		48FBB1602BB5613000EC2222 /* Controller */ = {
@@ -419,7 +447,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48EE3EBC2BBEA3AE00771153 /* OtpViewController.xib in Resources */,
 				481568AE2B8C50290077530D /* LaunchScreen.storyboard in Resources */,
+				48EE3EC22BBEA3D600771153 /* SuccessViewController.xib in Resources */,
 				481568AB2B8C50290077530D /* Assets.xcassets in Resources */,
 				481568A92B8C50280077530D /* Main.storyboard in Resources */,
 			);
@@ -562,8 +592,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48EE3EBB2BBEA3AE00771153 /* OtpViewController.swift in Sources */,
 				481568A62B8C50280077530D /* ViewController.swift in Sources */,
 				481568A22B8C50280077530D /* AppDelegate.swift in Sources */,
+				48EE3EC12BBEA3D600771153 /* SuccessViewController.swift in Sources */,
 				481568A42B8C50280077530D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
