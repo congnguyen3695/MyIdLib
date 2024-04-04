@@ -33,6 +33,13 @@ class ViewController: UIViewController {
 extension ViewController: MobileIdApplicationDelegate {
     func verifyMobileIdDidFinish(_ data: MobileIdAuth?, _ error: NSError?) {
         if let data = data {
+            MobileIdApplication.shared.getUserInfo(complition: {[weak self] data in
+                if data?.phoneNumberVerified == true {
+                    self?.statusLabel.text = "Login success"
+                } else {
+                    self?.statusLabel.text = error?.localizedDescription ?? "Mobile id invalid"
+                }
+            })
             statusLabel.text = data.toJSONString()
         } else {
             statusLabel.text = error?.localizedDescription ?? "Mobile id invalid"

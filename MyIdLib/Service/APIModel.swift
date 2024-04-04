@@ -19,12 +19,11 @@ class APIModel {
     }()
 
     class func request<T: Mappable>(link: String,
-                                   method: HTTPMethod = .post,
-                                    query: [String: String]? = nil,
-                                    body: [String: Any]? = nil,
+                                    method: HTTPMethod = .post,
+                                    parameters: [String: Any]? = nil,
                                     header: HTTPHeaders? = nil,
-                                   success: @escaping (_ data: T) -> Void,
-                                   failure: @escaping (_ error: NSError) -> Void) {
+                                    success: @escaping (_ data: T) -> Void,
+                                    failure: @escaping (_ error: NSError) -> Void) {
         var headers: HTTPHeaders = ["Content-Type": "application/json",
                                     "API_KEY": MyIdLib.shared().appConfig.apiKey]
         if let h = header {
@@ -34,7 +33,7 @@ class APIModel {
         }
         alamoFireManager.request(link,
                                  method: method,
-                                 parameters: body,
+                                 parameters: parameters,
                                  encoding: method == .get ? URLEncoding.default : JSONEncoding.default,
                                  headers: headers)
                         .responseString { response in

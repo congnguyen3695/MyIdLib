@@ -14,16 +14,16 @@ public class MobileIdApplication {
     
     public static let shared = MobileIdApplication()
     
-    public func checkAvailable(phone: String, complition: ((_ response: MobileIdAvailable?, _ error: NSError?)-> Void)? = nil) {
+    public func checkAvailable(phone: String, completion: ((_ response: MobileIdAvailable?, _ error: NSError?)-> Void)? = nil) {
         let params: [String: String] = ["phone": phone]
 
         APIModel.request(link: MyIdLib.shared().appConfig.mode.url + "api/v1/mobile-id/available",
                          method: .get,
-                         query: params,
+                         parameters: params,
                          success: {(data: BaseResponse<MobileIdAvailable>?) in
-            complition?(data?.data, nil)
+            completion?(data?.data, nil)
         }, failure: {error in
-            complition?(nil, error)
+            completion?(nil, error)
         })
     }
     
@@ -52,7 +52,7 @@ public class MobileIdApplication {
         }
         APIModel.request(link: MyIdLib.shared().appConfig.mode.url + "api/v1/mobile-id/verify-auth-code",
                          method: .post,
-                         body: params,
+                         parameters: params,
                          success: {[weak self] (data: BaseResponse<MobileIdAuth>?) in
             if let _ = data?.data?.accessToken,  let refreshToken = data?.data?.refreshToken {
                 Keychain.main[.refreshTokenMobileId] = refreshToken
@@ -64,16 +64,43 @@ public class MobileIdApplication {
         })
     }
     
+    // You should call with your server
     public func getUserInfo(complition: ((_ user: MobileIdUser?)-> Void)? = nil) {
         let params: [String: String] = ["accessToken": mobileIdAuth?.accessToken ?? ""]
 
         APIModel.request(link: MyIdLib.shared().appConfig.mode.url + "api/v1/mobile-id/get-user-info",
                          method: .post,
-                         query: params,
+                         parameters: params,
                          success: {(data: BaseResponse<MobileIdUser>?) in
             complition?(data?.data)
         }, failure: {error in
             complition?(nil)
+        })
+    }
+    
+    public func sendOtp(phone: String, completion: ((_ data: MessageResponse?, _ error: NSError?)-> Void)? = nil) {
+        let params: [String: String] = ["phone": phone]
+
+        APIModel.request(link: MyIdLib.shared().appConfig.mode.url + "api/v1/mobile-id/send-otp",
+                         method: .post,
+                         parameters: params,
+                         success: {(data: MessageResponse?) in
+            completion?(data, nil)
+        }, failure: {error in
+            completion?(nil, error)
+        })
+    }
+    
+    public func verifyOtp(phone: String, code: String, completion: ((_ data: MessageResponse?, _ error: NSError?)-> Void)? = nil) {
+        let params: [String: String] = ["phone": phone, "code": code]
+
+        APIModel.request(link: MyIdLib.shared().appConfig.mode.url + "api/v1/mobile-id/verify-otp",
+                         method: .post,
+                         parameters: params,
+                         success: {(data: MessageResponse?) in
+            completion?(data, nil)
+        }, failure: {error in
+            completion?(nil, error)
         })
     }
     
@@ -85,7 +112,7 @@ public class MobileIdApplication {
         let params: [String: String] = ["refreshToken": Keychain.main[string: .refreshTokenMobileId] ?? ""]
         APIModel.request(link: MyIdLib.shared().appConfig.mode.url + "api/v1/mobile-id/restore-access-token",
                          method: .post,
-                         body: params,
+                         parameters: params,
                          success: {[weak self] (data: BaseResponse<MobileIdAuth>?) in
             if let _ = data?.data?.accessToken,  let refreshToken = data?.data?.refreshToken {
                 Keychain.main[.refreshTokenMobileId] = refreshToken

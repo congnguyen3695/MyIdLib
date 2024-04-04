@@ -9,16 +9,16 @@ import Foundation
 import ObjectMapper
 
 public class MobileIdAuth: Mappable {
-    var accessToken: String?
-    var refreshToken: String?
-    var expiresIn: Int?
-    var refreshExpiresIn: Int?
-    var tokenType: String?
-    var idToken: String?
-    var notBeforePolicy: Int?
-    var sessionState: String?
-    var scope: String?
-    var state: String?
+    public var accessToken: String?
+    public var refreshToken: String?
+    public var expiresIn: Int?
+    public var refreshExpiresIn: Int?
+    public var tokenType: String?
+    public var idToken: String?
+    public var notBeforePolicy: Int?
+    public var sessionState: String?
+    public var scope: String?
+    public var state: String?
     
     init() {}
     
@@ -43,10 +43,10 @@ public class MobileIdAuth: Mappable {
 }
 
 public class MobileIdUser: Mappable {
-    var sub: String?
-    var loginHint: String?
-    var phoneNumberVerified: String?
-    var mobileId: String?
+    public var sub: String?
+    public var loginHint: String?
+    public var phoneNumberVerified: Bool?
+    public var mobileId: String?
     
     init() {}
     
@@ -65,7 +65,7 @@ public class MobileIdUser: Mappable {
 }
 
 public class MobileIdAvailable: Mappable {
-    var available: Bool?
+    public var available: Bool?
     
     init() {}
     
