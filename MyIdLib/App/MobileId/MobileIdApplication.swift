@@ -69,7 +69,7 @@ public class MobileIdApplication {
         let params: [String: String] = ["accessToken": mobileIdAuth?.accessToken ?? ""]
 
         APIModel.request(link: MyIdLib.shared().appConfig.mode.url + "api/v1/mobile-id/get-user-info",
-                         method: .post,
+                         method: .get,
                          parameters: params,
                          success: {(data: BaseResponse<MobileIdUser>?) in
             complition?(data?.data)

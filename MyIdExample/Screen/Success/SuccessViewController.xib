@@ -19,23 +19,34 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đăng nhập thành công" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XD5-0d-WaP">
-                    <rect key="frame" x="24" y="323.33333333333331" width="327" height="20.333333333333314"/>
+                    <rect key="frame" x="24" y="227" width="327" height="213"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="zZZ-JB-wCq">
+                    <rect key="frame" x="24" y="99" width="327" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="SYW-rO-RpV"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XD5-0d-WaP" secondAttribute="trailing" constant="24" id="36a-dg-ofD"/>
                 <constraint firstItem="XD5-0d-WaP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="708-tI-Y3y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zZZ-JB-wCq" secondAttribute="trailing" constant="24" id="AD8-Dj-NLx"/>
+                <constraint firstItem="zZZ-JB-wCq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="CwS-Hq-yqL"/>
+                <constraint firstItem="zZZ-JB-wCq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="Mqo-Hb-caU"/>
                 <constraint firstItem="XD5-0d-WaP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="dfJ-oj-4dF"/>
+                <constraint firstItem="XD5-0d-WaP" firstAttribute="top" secondItem="zZZ-JB-wCq" secondAttribute="bottom" constant="40" id="mjO-hg-UC0"/>
             </constraints>
             <point key="canvasLocation" x="140" y="21"/>
         </view>
     </objects>
     <resources>
+        <image name="logo" width="194" height="129"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

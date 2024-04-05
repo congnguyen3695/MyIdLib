@@ -27,14 +27,14 @@ public class MobileIdAuth: Mappable {
     }
     
     public func mapping(map: Map) {
-        accessToken <- map["accessToken"]
-        refreshToken <- map["refreshToken"]
-        expiresIn <- map["expiresIn"]
-        refreshExpiresIn <- map["refreshExpiresIn"]
-        tokenType <- map["tokenType"]
-        idToken <- map["idToken"]
-        notBeforePolicy <- map["notBeforePolicy"]
-        sessionState <- map["sessionState"]
+        accessToken <- map["access_token"]
+        refreshToken <- map["refresh_token"]
+        expiresIn <- map["expires_in"]
+        refreshExpiresIn <- map["refresh_expires_in"]
+        tokenType <- map["token_type"]
+        idToken <- map["id_token"]
+        notBeforePolicy <- map["not-before-policy"]
+        sessionState <- map["session_state"]
         scope <- map["scope"]
         state <- map["state"]
     }
@@ -56,9 +56,9 @@ public class MobileIdUser: Mappable {
     
     public func mapping(map: Map) {
         sub <- map["sub"]
-        loginHint <- map["loginHint"]
-        phoneNumberVerified <- map["phoneNumberVerified"]
-        mobileId <- map["mobileId"]
+        loginHint <- map["login_hint"]
+        phoneNumberVerified <- map["phone_number_verified"]
+        mobileId <- map["mobile_id"]
     }
     
     
