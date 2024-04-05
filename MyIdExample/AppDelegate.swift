@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let config = MyIdLibConfig()
-        config.apiKey = ""
+        config.apiKey = "cf97cf53-6670-49df-bbdf-dceed604833b"
         config.mode = .dev
         MyIdLib.shared().initial(application, appConfig: config)
         return true

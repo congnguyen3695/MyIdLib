@@ -13,3 +13,12 @@ target 'MyIdLib' do
   end
 
 end
+
+target 'MyIdExample' do
+  use_frameworks!
+  
+  pod 'Alamofire', '~>5.0'
+  pod 'ObjectMapper', '~>4.0'
+  pod 'KeychainAccess'
+
+end

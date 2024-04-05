@@ -41,11 +41,11 @@ final class BaseArrayResponse<T: Mappable>: Mappable {
     }
 }
 
-final class MessageResponse: Mappable {
+public final class MessageResponse: Mappable {
     var message: String?
 
     required init() {}
-    required init?(map: Map) {}
+    required public init?(map: Map) {}
     
     static func mock() -> Self {
         let obj = self.init()
@@ -53,7 +53,7 @@ final class MessageResponse: Mappable {
         return obj
     }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         message <- map["message"]
     }
 }

@@ -9,16 +9,16 @@ import Foundation
 import ObjectMapper
 
 public class MobileIdAuth: Mappable {
-    var accessToken: String?
-    var refreshToken: String?
-    var expiresIn: Int?
-    var refreshExpiresIn: Int?
-    var tokenType: String?
-    var idToken: String?
-    var notBeforePolicy: Int?
-    var sessionState: String?
-    var scope: String?
-    var state: String?
+    public var accessToken: String?
+    public var refreshToken: String?
+    public var expiresIn: Int?
+    public var refreshExpiresIn: Int?
+    public var tokenType: String?
+    public var idToken: String?
+    public var notBeforePolicy: Int?
+    public var sessionState: String?
+    public var scope: String?
+    public var state: String?
     
     init() {}
     
@@ -27,14 +27,14 @@ public class MobileIdAuth: Mappable {
     }
     
     public func mapping(map: Map) {
-        accessToken <- map["accessToken"]
-        refreshToken <- map["refreshToken"]
-        expiresIn <- map["expiresIn"]
-        refreshExpiresIn <- map["refreshExpiresIn"]
-        tokenType <- map["tokenType"]
-        idToken <- map["idToken"]
-        notBeforePolicy <- map["notBeforePolicy"]
-        sessionState <- map["sessionState"]
+        accessToken <- map["access_token"]
+        refreshToken <- map["refresh_token"]
+        expiresIn <- map["expires_in"]
+        refreshExpiresIn <- map["refresh_expires_in"]
+        tokenType <- map["token_type"]
+        idToken <- map["id_token"]
+        notBeforePolicy <- map["not-before-policy"]
+        sessionState <- map["session_state"]
         scope <- map["scope"]
         state <- map["state"]
     }
@@ -43,10 +43,10 @@ public class MobileIdAuth: Mappable {
 }
 
 public class MobileIdUser: Mappable {
-    var sub: String?
-    var loginHint: String?
-    var phoneNumberVerified: String?
-    var mobileId: String?
+    public var sub: String?
+    public var loginHint: String?
+    public var phoneNumberVerified: Bool?
+    public var mobileId: String?
     
     init() {}
     
@@ -56,16 +56,16 @@ public class MobileIdUser: Mappable {
     
     public func mapping(map: Map) {
         sub <- map["sub"]
-        loginHint <- map["loginHint"]
-        phoneNumberVerified <- map["phoneNumberVerified"]
-        mobileId <- map["mobileId"]
+        loginHint <- map["login_hint"]
+        phoneNumberVerified <- map["phone_number_verified"]
+        mobileId <- map["mobile_id"]
     }
     
     
 }
 
 public class MobileIdAvailable: Mappable {
-    var available: Bool?
+    public var available: Bool?
     
     init() {}
     
