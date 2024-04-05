@@ -8,7 +8,7 @@
 import UIKit
 import MyIdLib
 
-class OtpViewController: UIViewController {
+class OtpViewController: BaseViewController {
 
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var textField: UITextField!
@@ -18,6 +18,7 @@ class OtpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Xác thực"
         titleLabel.text = "Mã xác thực đã được gửi về số điện thoại \(phone)"
         MobileIdApplication.shared.sendOtp(phone: phone)
     }
@@ -30,7 +31,9 @@ class OtpViewController: UIViewController {
             present(alert, animated: true)
             return
         }
+        showLoading(isShow: true)
         MobileIdApplication.shared.verifyOtp(phone: phone, code: textField.text ?? "", completion: {[weak self] data, error in
+            self?.showLoading(isShow: false)
             if error == nil {
                 let vc = SuccessViewController()
                 var vcs = self?.navigationController?.viewControllers ?? []

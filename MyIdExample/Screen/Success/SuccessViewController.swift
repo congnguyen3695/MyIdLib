@@ -7,10 +7,11 @@
 
 import UIKit
 
-class SuccessViewController: UIViewController {
+class SuccessViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Trang chủ"
 
     }
 

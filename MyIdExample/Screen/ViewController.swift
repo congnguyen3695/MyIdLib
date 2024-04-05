@@ -8,7 +8,7 @@
 import UIKit
 import MyIdLib
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var textField: UITextField!
@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Đăng nhập"
         MobileIdApplication.shared.delegate = self
     }
 
@@ -27,6 +28,7 @@ class ViewController: UIViewController {
             return
         }
         // phone success: 999123456789
+        showLoading(isShow: true)
         MobileIdApplication.shared.checkAvailable(phone: textField.text ?? "", completion: {[weak self] data, error in
             if error == nil && data?.available == true {
                 MobileIdApplication.shared.login(phone: self?.textField.text ?? "",
@@ -38,6 +40,7 @@ class ViewController: UIViewController {
     }
     
     func openOtpView(mess: String?) {
+        showLoading(isShow: false)
         let alert = UIAlertController(title: "Thông báo", message: mess ?? "Xác thực không thành công", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Đóng", style: .cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Xác thực OTP", style: .default, handler: {[weak self] _ in
@@ -53,6 +56,7 @@ class ViewController: UIViewController {
 
 extension ViewController: MobileIdApplicationDelegate {
     func verifyMobileIdDidFinish(_ data: MobileIdAuth?, _ error: NSError?) {
+        showLoading(isShow: false)
         if let accessToken = data?.accessToken {
             // Cách 1: Gửi accessToken lên server để verify ( Khuyến cáo )
             // Cách 2: Demo verify ở client

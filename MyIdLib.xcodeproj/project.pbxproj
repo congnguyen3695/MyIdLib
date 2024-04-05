@@ -13,7 +13,6 @@
 		481568912B8C4F5F0077530D /* MyIdLibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568902B8C4F5F0077530D /* MyIdLibTests.swift */; };
 		481568922B8C4F5F0077530D /* MyIdLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 481568842B8C4F5E0077530D /* MyIdLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		481568A22B8C50280077530D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568A12B8C50280077530D /* AppDelegate.swift */; };
-		481568A42B8C50280077530D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568A32B8C50280077530D /* SceneDelegate.swift */; };
 		481568A62B8C50280077530D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481568A52B8C50280077530D /* ViewController.swift */; };
 		481568A92B8C50280077530D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 481568A72B8C50280077530D /* Main.storyboard */; };
 		481568AB2B8C50290077530D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 481568AA2B8C50290077530D /* Assets.xcassets */; };
@@ -30,6 +29,7 @@
 		48EE3EBC2BBEA3AE00771153 /* OtpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EE3EBA2BBEA3AE00771153 /* OtpViewController.xib */; };
 		48EE3EC12BBEA3D600771153 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE3EBF2BBEA3D600771153 /* SuccessViewController.swift */; };
 		48EE3EC22BBEA3D600771153 /* SuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EE3EC02BBEA3D600771153 /* SuccessViewController.xib */; };
+		48EE3EC42BC0043800771153 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EE3EC32BC0043800771153 /* BaseViewController.swift */; };
 		48FBB1632BB5616000EC2222 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1612BB5616000EC2222 /* AuthController.swift */; };
 		48FBB1642BB5616000EC2222 /* AuthController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48FBB1622BB5616000EC2222 /* AuthController.xib */; };
 		48FBB1692BB5758200EC2222 /* MobileId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBB1682BB5758200EC2222 /* MobileId.swift */; };
@@ -59,7 +59,6 @@
 		481568902B8C4F5F0077530D /* MyIdLibTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyIdLibTests.swift; sourceTree = "<group>"; };
 		4815689F2B8C50280077530D /* MyIdExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyIdExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		481568A12B8C50280077530D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		481568A32B8C50280077530D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		481568A52B8C50280077530D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		481568A82B8C50280077530D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		481568AA2B8C50290077530D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		48EE3EBA2BBEA3AE00771153 /* OtpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OtpViewController.xib; sourceTree = "<group>"; };
 		48EE3EBF2BBEA3D600771153 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		48EE3EC02BBEA3D600771153 /* SuccessViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessViewController.xib; sourceTree = "<group>"; };
+		48EE3EC32BC0043800771153 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		48FBB1612BB5616000EC2222 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		48FBB1622BB5616000EC2222 /* AuthController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthController.xib; sourceTree = "<group>"; };
 		48FBB1682BB5758200EC2222 /* MobileId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileId.swift; sourceTree = "<group>"; };
@@ -168,8 +168,6 @@
 			children = (
 				489C97892BBBF39600CC8D29 /* Screen */,
 				481568A12B8C50280077530D /* AppDelegate.swift */,
-				481568A32B8C50280077530D /* SceneDelegate.swift */,
-				481568A52B8C50280077530D /* ViewController.swift */,
 				481568A72B8C50280077530D /* Main.storyboard */,
 				481568AA2B8C50290077530D /* Assets.xcassets */,
 				481568AC2B8C50290077530D /* LaunchScreen.storyboard */,
@@ -244,6 +242,8 @@
 			children = (
 				48EE3EBE2BBEA3C400771153 /* Success */,
 				48EE3EBD2BBEA3BC00771153 /* Otp */,
+				481568A52B8C50280077530D /* ViewController.swift */,
+				48EE3EC32BC0043800771153 /* BaseViewController.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -596,7 +596,7 @@
 				481568A62B8C50280077530D /* ViewController.swift in Sources */,
 				481568A22B8C50280077530D /* AppDelegate.swift in Sources */,
 				48EE3EC12BBEA3D600771153 /* SuccessViewController.swift in Sources */,
-				481568A42B8C50280077530D /* SceneDelegate.swift in Sources */,
+				48EE3EC42BC0043800771153 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -871,6 +871,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8J9J8V53Z7;
@@ -902,6 +903,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8J9J8V53Z7;
