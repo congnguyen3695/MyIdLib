@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "MyIdLib"
-  spec.version      = "0.0.6"
+  spec.version      = "1.0.0"
   spec.summary      = "Login without password"
 
   # This description is used to generate tags and improve search results.
